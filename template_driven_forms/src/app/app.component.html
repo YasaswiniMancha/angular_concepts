@@ -1,0 +1,94 @@
+<p>Bootstrap-form</p>
+<div class="container mt-5">
+  <div class="form-area">
+   <form >
+    <div class="form-group">
+      <label >Full name</label>
+      <input type="text" placeholder="full name" class="form-control">
+    </div>
+    <div class="form-group">
+      <label >Email</label>
+      <input type="email" placeholder="email" class="form-control">
+    </div>
+    <div class="form-group">
+      <label >Address</label>
+    <textarea cols="30" rows="10" placeholder="address" class="form-control"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+   </form>
+  </div>
+</div>
+
+
+<div class="space">
+  ------------------------------------------
+</div>
+
+
+<p>angular ng form directive</p>
+
+<div class="container mt-5">
+  <div class="form-area">
+   <form #templateVariableName="ngForm" (ngSubmit)="onSubmit(templateVariableName)">
+    <div class="form-group">
+      <label >Full name</label>
+      <input type="text" placeholder="full name" class="form-control" name="fullName" ngModel>
+    </div>
+    <div class="form-group">
+      <label >Email</label>
+      <input type="email" placeholder="email" class="form-control" name="email" ngModel>
+    </div>
+    <div class="form-group">
+      <label >Address</label>
+    <textarea cols="30" rows="10" placeholder="address" class="form-control" name="address" ngModel></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+   </form>
+  </div>
+</div>
+
+
+
+---------------------------------------------
+
+
+<p> template driven form validators</p>
+
+<div class="container mt-5">
+  <div class="form-area">
+   <form #templateVariableName="ngForm" (ngSubmit)="onSubmit(templateVariableName)">
+    <div class="form-group">
+      <label >Full name</label>
+      <input 
+      type="text" 
+      placeholder="full name" 
+      class="form-control"
+      name="fullName" 
+      ngModel 
+      #fullName='ngModel' 
+      (change)="getValue(fullName)"
+      required
+      [ngClass]="{'is-invalid': fullName.touched && fullName.invalid}"
+      >
+      <div class="alert alert-danger" *ngIf="fullName.touched && fullName.invalid">
+        Full Name is required
+      </div>
+
+    </div>
+    <div class="form-group">
+      <label >Email</label>
+      <input type="email" placeholder="email" class="form-control" name="email" ngModel>
+    </div>
+    <div class="form-group">
+      <label >Address</label>
+    <textarea cols="30" rows="10" placeholder="address" class="form-control" name="address" ngModel></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+   </form>
+  </div>
+</div>
+-------------------------------------------------------------
+<app-forms></app-forms>

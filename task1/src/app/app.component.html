@@ -1,0 +1,23 @@
+
+<!-- Using two way data binding -->
+<div class="two-way-bind">
+     <h1>Post Form</h1>
+     <br><br>
+     <input type ='text' placeholder="Post Title" [(ngModel)] = "postTitle">
+     <br><br>
+     <textarea cols="30" rows="10" placeholder="Post Details" [(ngModel)] = "postDetails"></textarea>
+     <br><br>
+     <input type ='text' placeholder="Post Image URL" [(ngModel)] = "imageUrl">
+     <br><br>
+     <input type ='text' placeholder="Post URL" [(ngModel)] = "postURL">
+     <br><br>
+     <input type="checkbox" [(ngModel)] = "addBackround"> Add Background
+</div>
+
+<!-- Using string interpolation -->
+<div class="strPolation">
+     <img [src]='imageUrl' alt="" > 
+     <h1> <span [class.add-backround]="addBackround"> {{ postTitle }} </span> </h1>
+     <p>  {{ postDetails }} </p>
+     <a [href]="postURL" target="_blank" [style.display]="postURL ? 'block' : 'none' ">postURL</a>
+</div>

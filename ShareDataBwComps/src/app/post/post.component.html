@@ -1,0 +1,16 @@
+<h1>{{ title }}</h1>    
+ <!-- it is One-way binding: Data flows in one direction, from the model to the UI.
+databinding with typescript  post.component.ts
+inside curly braces we can write any valid typescript code
+for example:  100+50  we will get 150 -->
+
+<h3>{{ fromParent }}</h3>  
+<!-- it will show the resultant -->
+
+<app-post-list [fromPostComp]='messageFromPost'></app-post-list>
+<!-- here we are binding "messageFromPost" variable and also assigning it to a random variable name "fromPostComp"  -->
+ <!-- now see postlist component ts file -->
+
+<button (click)="sendMessageToApp()">click</button>
+<!-- Here sendMessageToApp is a method which is implemented in post ts component -->
+ <!-- now go to app html -->

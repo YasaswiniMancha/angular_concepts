@@ -1,0 +1,24 @@
+  <!--string interpolation -->
+  <p>{{ message }}</p>
+
+  <!--one way  data binding -->
+  <img [src]="imgUrl" alt="flower" style= "width: 300px; height: 200px">
+  <!-- or can use below -->
+  <img src="{{imgUrl}}" alt="floral" style= "width: 300px; height: 200px">
+
+
+<!-- class binding -->
+ <h1 [class.text-red]="bool">Class-binding</h1>
+ <!-- of "bool"  is false in app ts , then color will be black by default-->
+
+<!-- inline style binding -->
+ <h1 [style.color]=" bool? 'blue': 'pink' ">Style Binding</h1>
+
+ <!-- event binding -->
+ <b>For Event Binding </b>
+ <button (click)="buttonClick()">Click me</button> 
+
+<br><br>
+ 
+<!-- two way data binding -->
+<input type="text" [(ngModel)]='textValue' (keyup.enter)="keyUp()">

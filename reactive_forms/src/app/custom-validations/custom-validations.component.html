@@ -1,0 +1,37 @@
+<br><br>
+
+<h1>custom validations</h1>
+
+<div class="container">
+    <form [formGroup]="form">
+        <div class="form-group">
+            <label >Username</label>
+            <input type="text" class="form-control" formControlName="username">
+            <div *ngIf="fc.username.errors?.required">
+                <div class="alert alert-danger" *ngIf="fc.username.touched && fc.username.invalid" >user name is required</div>
+            </div>
+            <div *ngIf="fc.username.errors?.minlength">
+                <div class="alert alert-danger" *ngIf="fc.username.touched && fc.username.invalid" >user name must be atleast 7 characters</div>
+            </div>
+            <div *ngIf="fc.username.errors?.noSpaceValidator">
+                <div class="alert alert-danger" *ngIf="fc.username.touched && fc.username.invalid" >user name should not contain spaces</div>
+            </div>
+            
+        </div>
+
+
+        <div class="form-group">
+            <label >Password</label>
+            <input type="password" class="form-control" formControlName="password">
+            <div *ngIf="fc.password.errors?.required">
+                <div class="alert alert-danger" *ngIf="fc.password.touched && fc.password.invalid" >password is required</div>
+            </div>
+            <div *ngIf="fc.password.errors?.minlength">
+                <div class="alert alert-danger" *ngIf="fc.password.touched && fc.password.invalid" >password must be atleast 8 characters</div>
+            </div>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">submit</button>
+    </form>
+</div>

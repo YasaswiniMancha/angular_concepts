@@ -1,0 +1,15 @@
+<p>ng-switch case</p>
+<div>
+    <button (click)="onClick('step 1')">Step 1</button>
+    <button (click)="onClick('step 2')">Step 2</button>
+    <button (click)="onClick('step 3')">Step 3</button>
+</div>
+<br>
+<div [ngSwitch]="stepForm">
+    <div *ngSwitchCase="'step 1'">step 1 form</div>
+    <div *ngSwitchCase= "'step 2'">step 2 form</div>
+    <div *ngSwitchCase="'step 3'">step 3 form</div>
+    <div *ngSwitchDefault>Default case</div>
+</div>
+-------------------------------------
+<app-ngstyle-directive></app-ngstyle-directive>

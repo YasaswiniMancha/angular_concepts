@@ -1,0 +1,32 @@
+<h1>Hello new application</h1>
+
+  <navbar-app></navbar-app> <!-- child component of app component --> 
+
+
+
+  
+  <p> {{message}} </p>
+  <!-- messageEvent is assigned to function recieveMessage , now go to app ts-->
+
+
+    <!-- fromParent is a random name assigned to the parentMessage, now bind this with post component using @Input decorator -->
+     <!-- lets see post.component.ts for fromParent parameter -->
+  <app-post [fromParent]='parentMessage' (messageEvent)="receiveMessage($event)" > </app-post>    
+
+
+  <!-- now got to app ts for messageEvent parameter-->
+ <p>{{messageFromPost}}</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

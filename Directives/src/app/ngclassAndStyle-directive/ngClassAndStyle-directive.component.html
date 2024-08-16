@@ -1,0 +1,24 @@
+<h1
+[ngStyle]="{
+    color: isActive ? 'blue' : 'green',
+    textTransform: isActive ? 'uppercase' : 'lowercase'
+
+}"
+>NG style directive</h1>
+
+----------------------------------
+
+<h2
+[class.main]="isActive"
+[class.text_weight]="isActive" 
+>using class</h2>
+
+<h2 
+ [ngClass]=
+ "{
+    'main': isActive ,
+    'text_weight': isActive
+ }"
+ >using Ng-class directive</h2>
+
+

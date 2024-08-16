@@ -1,0 +1,14 @@
+<!-- Event Filtering -->
+<input type="text" placeholder="event filtering" (keyup.enter)="onkeyUp($event)">
+<!-- on pressing enter we can get the output , otherwise keyup is also used -->
+
+
+<!-- template variable -->
+<br>
+<input type="text" (keyup.enter)="onKey1($event)" placeholder="template variable  ($event)"  >     
+<br>
+<!-- another way -->
+<input type="text" placeholder="template variable" (keyup.enter)="onKey(username.value)"  #username> 
+<br>
+<!-- another way but also need to place FormsModule in app.module.ts -->
+<input type="text" [(ngModel)]="userName" (keyup.enter)="onKey2()" placeholder="template variable(ngmodel)">

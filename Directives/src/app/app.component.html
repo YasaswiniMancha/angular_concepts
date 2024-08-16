@@ -1,0 +1,64 @@
+<p>{{postArray}}</p>
+------------------------------
+<p>using string interpolation</p>
+<ul>
+  <li>{{ postArray1[0] }}</li>
+  <li>{{ postArray1[1] }}</li>
+  <li>{{ postArray1[2] }}</li>
+  <li>{{ postArray1[3] }}</li>
+  <li>{{ postArray1[4] }}</li>
+</ul>
+<!-- Used String interpolation above , but its not good approach for arrays to represent, so using NgFor directive-->
+ 
+------------------------------
+
+<p> using NgFor for array</p>
+<button (click)="addNew()"> add new data</button>
+
+<div *ngIf="postArray.length > 0; else noData">
+   <ul>
+      <li *ngFor="let post of postArray; let i = index">
+          {{ post }} 
+          <button (click)="deleteArrElement(i)">delete</button>
+      </li>
+   </ul>
+</div>
+
+<ng-template #noData>
+  <p>There is no data to fetch....</p>
+</ng-template>
+
+
+------------------------------
+
+
+
+<p>using NgFor for object Array</p>
+<button (click)="addNewArrObj()">add new data </button>
+
+<ul>
+ 
+  <li *ngFor="let obj of objArray">{{ obj | json }} 
+    <button (click)="onDelete()"> delete</button>
+    <!-- | json is to convert the data to json format, | is a pipe  -->
+    <!-- one way to delete using onDelete() method -->
+  </li>
+  
+  <br>
+
+  <!-- another way to use ngIf -->
+  <div *ngIf= 'objArray.length > 0'  >  
+    <li *ngFor="let post of objArray">{{ post.postTitle }} 
+       <button (click)="onDelete1(post)"> delete</button> 
+    <!-- another way to delete using onDelete1() method -->
+    </li> 
+  </div>
+  <div *ngIf =" objArray.length ==0 ">
+      <p>There is no data to fetch....</p>
+  </div>
+
+</ul>
+
+-----------------------------
+<br> 
+<app-step-forms></app-step-forms>
