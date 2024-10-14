@@ -5,7 +5,7 @@ An Angular service is a singleton object that provides specific functionality to
 
 Simply we use angular services , to share data and common methods among components whether there is a relationship between components or not.
 
---> ng generate service servuce_name
+--> ng generate service service_name
 
 Dependency Injection (DI) in Angular
 ------------------------------------
@@ -27,7 +27,7 @@ angular interface
 In Angular, interfaces are used to define the structure of an object. They are a way to describe the shape of an object, enforcing that the object meets certain criteria. Interfaces help in providing type-checking and ensuring that the objects used in the application adhere to a specific structure.
 
 
-command to generate interface
+command to generate interface is : 
 ng g i folder_name/filename
 
 
