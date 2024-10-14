@@ -1,9 +1,9 @@
 An angular Directive is a special type of technology that can manipulate the DOM object -->
- Directives can do adding html elements removing html elements from DOM dynamically
-  Directives are components without a view
-   angular components are directives, with a view
-  4 tyes of Direcctive types : 1. component Directive 2. Structural Directive 3. Attribute Directive 4. Custom Directive
- 1. Component Directive : A component directive is a angular directive that creates a new component with a template view
+ Directives can do adding html elements removing html elements from DOM dynamically.
+  Directives are components without a view.
+  Angular components are directives, with a view.
+  4 types of Directives : 1. component Directive 2. Structural Directive 3. Attribute Directive 4. Custom Directive
+ 1. Component Directive : A component directive is a angular directive that creates a new component with a template view.
  2. Structural Directive : Structural directives change / manipulate the DOM layout by adding, removing or manipulating DOM elements.
 -> Responsible for the HTML layout.
 -> Shape or Reshape the DOM structure by adding, removing HTML elements.
